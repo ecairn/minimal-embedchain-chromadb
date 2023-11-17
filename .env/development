@@ -1,0 +1,2 @@
+FASTAPI_CONFIG=development
+SECRET_KEY=my_precious

@@ -3,8 +3,9 @@ from fastapi.responses import JSONResponse
 from embedchain_app import create_embedchain_app
 
 import chromadb
-
-chroma_client = chromadb.HttpClient(host='db', port=8000)
+# settings way
+settings = chromadb.Settings(chroma_server_host="db", chroma_server_http_port=8000)
+chroma_client = chromadb.Client(settings)
 
 router = APIRouter(
     prefix="/api/v1/queries",

@@ -21,7 +21,6 @@ from embedchain.vectordb.chroma import ChromaDB
 def create_embedchain_app(collection_name: str, app_id: str = None):
     chroma_config = ChromaDbConfig(
         collection_name=collection_name,
-        dir="db",
         host="db",
         port="8000",
     )
